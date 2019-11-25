@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body onload= "draw()">
+    <canvas id="sketch" width="300" height="300">
+    </canvas>
+  <script>
+  function draw() {
+  var sketch = document.getElementById('sketch');
+  var context = sketch.getContext("2d");
+
+  var str_radius = prompt("Give me a number");
+  //var int_radius = parseInt(str_radius);
+
+  var str_red = prompt("Type Red");
+  //var int_red = parseInt(str_radius);
+
+  var str_green = prompt("Type Green");
+  //var int_green = parseInt(str_green);
+
+  var str_blue = prompt("Type Blue");
+  //var int_blue = parseInt(str_blue);
+//while loop must be used.
+while(int_radius > 190){
+  var str_radius = prompt("Try again. Radius must be less than, or equal to 190.");
+  var int_radius = parseInt(str_radius);
+} while(str_red !== "Red"){
+  while(str_green !== "Green"){
+  while(str_blue) !== "Blue"{
+    }
+  }
+}
+ if(str_red === "Red"){
+   context.fillStyle = "#42FFB9";
+ } else if(str_green === "Green"){
+   context.fillStyle = "#22EB10";{
+ } else if(str_blue) ==="Blue";{
+   context.fillStyle = "#F3FF4F";
+ }
+}
+context.fillStyle = ();
+
+
+  context.beginPath();
+  context.arc(230, 110, 40, 0, 2 * Math.PI, true);
+  context.closePath();
+  context.fill();
+}
+
+
+
+
+
+  </script>
+  </body>
+</html>
