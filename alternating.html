@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+
+	<canvas id="sketch" width="300" height="300">
+		
+	</canvas>
+
+	<script>
+		function draw() {
+		 	var sketch = document.getElementById('sketch');
+			var context = sketch.getContext("2d");
+				
+	    var insert = prompt("How many pairs?");
+			var output = parseInt(insert);
+			var outcome = output * 2 - 1;
+			for (i = 0; i <= outcome; i++) {
+				if (i % 2 == 0) {
+					
+				 	context.fillStyle = "#E82E17";	// red things
+					context.fillRect((i * 25), 20, 20, 20)
+				} else {
+					// for all ODD number values of i
+				 	context.fillStyle = "#0000ff";	// blue things
+					context.beginPath();
+					context.arc((i * 25 + 10), 30, 10, 0, 2 * Math.PI, true);
+					context.closePath();
+					context.fill();
+				}
+			}
+		}
+	</script>
+
+</body>
+</html>
