@@ -17,23 +17,25 @@
 	<script>
  
  function draw() {
-		 	var sketch = document.getElementById('sketch');
-			var context = sketch.getContext("2d");
+       var sketch = document.getElementById('sketch');
+       var context = sketch.getContext("2d");
+       context.fillStyle = "#FFB642";
+       context.fillRect(40, 30, 100, 100);
+       context.fillStyle = "#0000ff"; 
+       context.fillRect(80,60,200,200);
   
-  context.fillStyle = "#FFB642";
-					context.fillRect(40, 30, 100, 100);
-          context.fillRect(80,60,200,200);
   
+  context.fillStyle = "#3C3EE8"; //Left Tire
+  context.beginPath();
+  context.arc(60, 50, 50, 0, 2 * Math.PI, true);
+  context.closePath();
+  context.fill(); 
   
-  context.fillStyle = "#3C3EE8";
-  
- context.beginPath();
-		
-      context.arc(60, 50, 50, 0, 2 * Math.PI, true);
-			context.closePath();
-			context.fill(); 
-  
-  }
+  context.fillStyle = "#EB4034"; //Right Tire 
+  context.beginPath();
+  context.arc(190, 125, 30, 0, 2 * Math.PI, true);
+  context.closePath();
+  context.fill();  }
 	</script>
 
 </body>
